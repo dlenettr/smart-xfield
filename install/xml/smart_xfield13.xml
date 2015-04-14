@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>Smart XField</id>
+	<version>1.2</version>
+	<vqmver>2.4.1</vqmver>
+		<author>MaRZoCHi</author>
+	<file name="engine/modules/show.full.php">
+		<operation>
+			<ignoreif><![CDATA[require_once ENGINE_DIR . "/modules/smart.xfield.module.php";]]></ignoreif>
+			<search position="before"><![CDATA[if( strpos( $tpl->copy_template, "[catlist=" ) !== false ) {]]></search>
+			<add><![CDATA[
+		// Smart Xfield v1.2
+		require_once ENGINE_DIR . "/modules/smart.xfield.module.php";
+		// Smart Xfield v1.2
+]]></add>
+		</operation>
+	</file>
+	<file name="engine/modules/show.short.php">
+		<operation>
+			<ignoreif><![CDATA[include ENGINE_DIR . "/modules/smart.xfield.module.php";]]></ignoreif>
+			<search position="before"><![CDATA[if( strpos( $tpl->copy_template, "[catlist=" ) !== false ) {]]></search>
+			<add><![CDATA[
+		// Smart Xfield v1.2
+		include ENGINE_DIR . "/modules/smart.xfield.module.php";
+		// Smart Xfield v1.2
+]]></add>
+		</operation>
+	</file>
+	<file name="engine/modules/show.custom.php">
+		<operation>
+			<ignoreif><![CDATA[include ENGINE_DIR . "/modules/smart.xfield.module.php";]]></ignoreif>
+			<search position="before"><![CDATA[if( strpos( $tpl->copy_template, "[catlist=" ) !== false ) {]]></search>
+			<add><![CDATA[
+	// Smart Xfield v1.2
+	include ENGINE_DIR . "/modules/smart.xfield.module.php";
+	// Smart Xfield v1.2
+]]></add>
+		</operation>
+	</file>
+</modification>
